@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block main %}
+
+  <div class="row">
+	  <div class="col">
+		  <div class="page-header">
+			  <h2 class="text-center">Relação de materiais disponíveis no estoque do almoxarifado</h2>
+		  </div>
+	  </div>
+  </div>
+
+
+	{% for material in materiais %}
+		<table class="table table-bordered">
+		  <tbody>
+			<tr>
+			  {% if material.available == True %}
+				<td>
+					<p><strong>Código:</strong> {{ material.codigo }}</p>
+					<p><strong>Descrição:</strong> {{ material }}</p>
+					<p><strong>Unidade:</strong> {{ material.unid }}</p>
+			  {% endif %}
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+	{% endfor %}
+
+
+{% endblock %}
+

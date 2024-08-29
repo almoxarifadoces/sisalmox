@@ -1,0 +1,35 @@
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+
+          <a class="navbar-brand" href="{% url 'core:inicio' %}">SisAlmox</a>
+
+      </div>
+
+      <ul class="nav navbar-nav">
+
+          <li class="dropdown"><a href="{% url 'core:lista_material' %}">Ver Todo o Estoque</a>
+          </li>
+
+        <form class="navbar-form navbar-left" action="{% url 'core:lista_pesquisa' %}" method="GET" value="{{request.GET.q}}">
+          <div class="input-group">
+            <input type="text" class="form-control" name="q" value="{{request.GET.q}}" placeholder="Pesquisar material">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit" name="submit" value="Search">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+

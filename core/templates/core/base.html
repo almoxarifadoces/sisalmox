@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sistema de Almoxarifado - CES/UFCG</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/gif" href="http://images2.imgbox.com/80/37/Z0t7LDKl_o.gif">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+      img {
+      }
+      .grayscale { filter: grayscale(200%);}
+      .blur { filter: blur(4px);}
+
+    </style>
+  </head>
+
+  <body>
+
+    {% include "core/navbar.html" %}
+
+    <div class="container">
+      {% block main %}{% endblock %}
+    </div>
+
+  </body>
+  
+   
+  
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
+	<div class="container">
+		<p class="navbar-text pull-left"><a href="{% url 'core:inicio' %}">Início</a></p>        
+		<p class="navbar-text pull-right"><a href="#top">Voltar ao Topo</a></p>
+	</div>
+  </nav>
+  
+</html>
